@@ -1,2 +1,84 @@
-# mini-compiler-c-subset
-Mini compiler in C for a C-like subset. Covers lexer, parser, semantics, symbol table, TAC gen, and error handling with hierarchical symbol tables and &lt;100ms parsing throughput. Achieved 100% error detection across 50+ test programs, generating executable C++ output through compilation pipeline.
+# Mini Compiler: C-Like Subset in C++
+
+MIT licensed. Built with C++11.
+
+## Quick Rundown
+This is a from-scratch compiler for a stripped-down C variant. I (along with Mahnoor Khan and Hafssa Tabassum) built it for our Compiler Construction lab at UET Lahore. No shortcuts – hand-coded lexer, recursive-descent parser, semantic checks, symbol table, TAC output, and even generates/runs C++ code. Submitted to Ma’am Ghazala back in Jan '26.
+
+Why bother? It shows you can dive deep into compilers: tokenizing 50+ types, handling scopes, type mismatches, and recovering from errors without crashing. Tested on real code snippets – valid stuff runs, invalid gets flagged with line/col details.
+
+Supports:
+- Types: int, float, char, void, bool, string
+- Vars, functions, params, returns
+- Ops: + - * / % < > && || ! ++ --
+- Controls: if/else/elseif, while/do-while, for, switch/case/default
+- I/O: printf, scanf, print
+- Preproc: basic #include, #define
+- Errors: lexical/syntax/semantic with recovery (panic mode, skip to ; or })
+- Extras: Color output, timing per phase, interactive menu
+
+## Grammar Snippet (EBNF-ish)
+<program> → <declaration>* <function>*  
+<declaration> → <type> <id> ('[' <num> ']')? ('=' <expr>)? ';'  
+<type> → int | float | char | void  
+<function> → <type> <id> '(' <params>? ')' '{' <stmts>* '}'  
+(Full rules in the report PDF – precedence via recursion.)
+
+## Setup & Run
+Need g++ (11+). Tested on Linux, should work on Windows with MinGW.
+
+1. Clone: `git clone https://github.com/yourusername/mini-compiler-c-subset.git`  
+2. cd in: `cd mini-compiler-c-subset`  
+3. Build: `g++ -std=c++11 -o mini_compiler src/*.cpp`  
+4. Fire it up: `./mini_compiler`
+
+Menu lets you compile files (.c or .txt), type code interactively, or run samples.
+
+Example valid code:
+int x, y, z;
+x = 8;
+y = 4;
+z = x + y * (x - y);
+print(z);
+
+Spits out 36. For crap code (undeclared var, type screwup), it reports errors but keeps going.
+
+Outputs: tokens.txt, parse_tree.txt, tac.txt, symbols.txt, errors.txt, output.cpp (which it compiles and runs).
+
+## Tests
+Check /tests/ for valid/invalid examples. Valid: arith, functions, arrays. Invalid: redeclares, missing semis, type fails. All caught, under 100ms compile time.
+
+## Folder Setup
+- src/: lexer.cpp, parser.cpp, semantic.cpp, symboltable.cpp, tac.cpp, codegen.cpp, main.cpp
+- tests/: valid/ and invalid/ with .c files and expected outs
+- docs/: Mini_Compiler_Report.pdf (full deets)
+- README.md, LICENSE, .gitignore
+
+## Wanna Contribute?
+Fork it, branch like `fix/lexer-bug`, commit, PR. Stick to C++11, add tests, update docs. Bugs? Open an issue.
+
+## License
+MIT – copy, tweak, whatever. Copyright 2026 us three.
+
+Shoutout to the Dragon Book for inspo. Hit me up at shanerumman4@gmail.com if questions.
+
+MIT License
+
+Copyright (c) 2026 Arfa Khalid
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+# Contributing
+
+Cool if you wanna help. Student project, but fixes welcome.
+
+1. Fork.
+2. Branch: git checkout -b your-thing
+3. Commit.
+4. Push, PR.
+
+Rules: C++11, test new stuff, docs if changed.
