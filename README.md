@@ -56,7 +56,7 @@ Supports:
 ## Setup & Run
 Need g++ (11+). Tested on Linux, should work on Windows with MinGW.
 
-1. Clone: `git clone https://github.com/yourusername/mini-compiler-c-subset.git`  
+1. Clone: `git clone https://github.com/arfaakhalid/mini-compiler-c-subset.git`  
 2. cd in: `cd mini-compiler-c-subset`  
 3. Build: `g++ -std=c++11 -o mini_compiler src/*.cpp`  
 4. Fire it up: `./mini_compiler`
