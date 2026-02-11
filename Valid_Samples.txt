@@ -1,0 +1,81 @@
+//sample 1
+int a;
+float b;
+bool flag;
+
+a = 10;
+b = 3.5;
+flag = true;
+
+print(a);
+print(b);
+print(flag);
+
+
+
+//sample 2
+int x;
+int y;
+int z;
+
+x = 8;
+y = 4;
+
+z = x + y * (x - y);
+
+print(z);
+
+
+//sample 3
+int a;
+int b;
+
+a = 6;
+b = 9;
+
+if (a < b) {
+    print(a);
+} else {
+    print(b);
+}
+
+
+//sample 4
+int i;
+int sum;
+
+i = 1;
+sum = 0;
+
+while (i <= 5) {
+    sum = sum + i;
+    i = i + 1;
+}
+
+print(sum);
+
+
+
+//SAMPLE 5
+int i;
+int fact;
+
+fact = 1;
+
+for (i = 1; i <= 5; i = i + 1) {
+    fact = fact * i;
+}
+
+print(fact);
+
+
+//SAMPLE 6
+int x;
+bool check;
+
+x = 10;
+check = (x > 5);
+
+if (check) {
+    print(x);
+}
