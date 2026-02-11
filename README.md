@@ -21,7 +21,7 @@ Run: ./mini_compiler
 
 Screenshots (See It in Action)
 Here's how it looks running on my setup:
-https://github.com/Arfaakhalid/mini-compiler-c-subset/blob/main/Screenshot%20(624).png
+https://github.com/Arfaakhalid/mini-compiler-c-subset/Screenshot(624).png
 
 Boom, main menu:
 
