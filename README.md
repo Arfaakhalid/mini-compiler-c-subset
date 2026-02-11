@@ -23,14 +23,17 @@ Run: ./mini_compiler
 
 | ---------------------- Preview ----------------------------- |
 |--------------------------------------------------------------|
-| ![](Screenshot%20(624).png) | ![](Screenshot%20(625).png) | ![](Screenshot%20(626).png) | ![](Screenshot%20(627).png) |
+ ![](Screenshot%20(624).png)
+ ![](Screenshot%20(625).png) 
+ ![](Screenshot%20(626).png)
+ ![](Screenshot%20(627).png)
+![](Screenshot%20(628).png) 
+![](Screenshot%20(629).png)
+![](Screenshot%20(630).png)
+![](Screenshot%20(631).png)
+![](Screenshot%20(632).png) 
 
-| ---------------------- Preview ----------------------------- |
 |--------------------------------------------------------------|
-| ![](Screenshot%20(628).png) | ![](Screenshot%20(629).png) | ![](Screenshot%20(630).png) | ![](Screenshot%20(631).png) |
-
-| ![](Screenshot%20(632).png) |
-
 Boom, main menu:
 
 Supports:
