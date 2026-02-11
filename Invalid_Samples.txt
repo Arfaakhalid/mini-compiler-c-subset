@@ -1,0 +1,52 @@
+//SAMPLE 1
+int a;
+
+a = 5;
+b = 10;
+
+
+//SAMPLE 2
+
+int x;
+int x;
+
+
+//SAMPLE 3
+int a;
+
+a = 10;
+
+if (a) {
+    print(a);
+}
+
+
+//SAMPLE 4
+int i;
+
+i = 0;
+
+while i < 3 {
+    i = i + 1;
+}
+
+
+
+//SAMPLE 5
+int add(int x, int y) {
+    return x + y;
+}
+
+int result;
+
+result = add(5);
+
+
+
+//SAMPLE 6
+
+int inc(int x) {
+    x = x + 1;
+}
+
+
