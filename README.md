@@ -34,7 +34,7 @@ Run: ./mini_compiler
 ![](Screenshot%20(632).png) 
 
 |--------------------------------------------------------------|
-Boom, main menu:
+
 
 Supports:
 - Types: int, float, char, void, bool, string
