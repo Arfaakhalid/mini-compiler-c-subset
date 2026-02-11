@@ -19,9 +19,17 @@ Hop in: cd mini-compiler-c-subset
 Compile: g++ -std=c++11 -o mini_compiler src/*.cpp
 Run: ./mini_compiler
 
-Screenshots (See It in Action)
-Here's how it looks running on my setup:
-https://github.com/Arfaakhalid/mini-compiler-c-subset/Screenshot(624).png
+##  Screenshots
+
+| ---------------------- Preview ----------------------------- |
+|--------------------------------------------------------------|
+| ![](Screenshot%20(624).png) | ![](Screenshot%20(625).png) | ![](Screenshot%20(626).png) | ![](Screenshot%20(627).png) |
+
+| ---------------------- Preview ----------------------------- |
+|--------------------------------------------------------------|
+| ![](Screenshot%20(628).png) | ![](Screenshot%20(629).png) | ![](Screenshot%20(630).png) | ![](Screenshot%20(631).png) |
+
+| ![](Screenshot%20(632).png) |
 
 Boom, main menu:
 
@@ -76,27 +84,5 @@ Check /tests/ for valid/invalid examples. Valid: arith, functions, arrays. Inval
 Fork it, branch like `fix/lexer-bug`, commit, PR. Stick to C++11, add tests, update docs. Bugs? Open an issue.
 
 ## License
-MIT – copy, tweak, whatever. Copyright 2026 us three.
-
-Shoutout to the Dragon Book for inspo. Hit me up at shanerumman4@gmail.com if questions.
-
-MIT License
-
-Copyright (c) 2026 Arfa Khalid
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-# Contributing
-
-Cool if you wanna help. Student project, but fixes welcome.
-
-1. Fork.
-2. Branch: git checkout -b your-thing
-3. Commit.
-4. Push, PR.
-
-Rules: C++11, test new stuff, docs if changed.
+MIT – free to use/modify. Copyright 2026 Arfa Khalid.
+Questions? shanerumman4@gmail.com. This was built from scratch to learn, not copied from tutorials – pure sweat on VS Code WSL.
