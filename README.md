@@ -1,11 +1,29 @@
 # Mini Compiler: C-Like Subset in C++
+It's for a simplified version of C – think basic types, loops, functions, and I/O – but we built it all from the ground up in C++ on Visual Studio Code using the WSL Linux extension. No cheating with Flex or Bison; everything's manual to really get how compilers tick. It's a solid project to learn the ropes, but it handles real code: parses it, checks for errors, generates intermediate code, and even runs the output. Great for anyone curious about compilers, whether you're a dev or just starting out.
+Keywords for the curious (or search engines): C compiler project, compiler construction in C++, lexical analyzer, syntax parser, semantic analysis, symbol table management, three-address code generation, error handling in compilers, recursive descent parsing.
+Licensed under MIT.
 
-MIT licensed. Built with C++11.
+Menu-Driven Interface: Fire it up, and you get a clean menu to compile files, type code on the fly, or test samples. No command-line hassle.
+Phased Compilation: Shows each step – lexical (tokens table), syntax (parse tree), semantic (symbol table with init/used flags), TAC (intermediate instructions), code gen (makes output.cpp, compiles, runs).
+Error Smarts: Catches lexical (bad chars), syntax (missing ;), semantic (wrong types). Uses panic-mode recovery – skips junk to report more errors. Warnings for unused vars.
+Interactive and File-Based: Write code live or load .c files like test_valid.c (works) or test_invalid.c (errors out gracefully).
+Performance Perks: Times each phase in microseconds, color-coded output for readability, generates reports (tokens.txt, errors.txt, etc.).
+Execution: For valid code, it runs and shows output right there – e.g., print(z) actually prints the value.
 
-## Quick Rundown
-This is a from-scratch compiler for a stripped-down C variant. I (along with Mahnoor Khan and Hafssa Tabassum) built it for our Compiler Construction lab at UET Lahore. No shortcuts – hand-coded lexer, recursive-descent parser, semantic checks, symbol table, TAC output, and even generates/runs C++ code. Submitted to Ma’am Ghazala back in Jan '26.
+It's advanced enough to feel like a real compiler (full pipeline to execution), but simple: just a tutorial-style project we scratched together in VS Code on WSL to understand basics.
+Setup and Run (Step-by-Step)
+You'll need g++ (C++11 or later). I built/tested on Ubuntu via WSL in VS Code – super straightforward.
 
-Why bother? It shows you can dive deep into compilers: tokenizing 50+ types, handling scopes, type mismatches, and recovering from errors without crashing. Tested on real code snippets – valid stuff runs, invalid gets flagged with line/col details.
+Clone the repo: git clone https://github.com/arfaakhalid/mini-compiler-c-subset.git
+Hop in: cd mini-compiler-c-subset
+Compile: g++ -std=c++11 -o mini_compiler src/*.cpp
+Run: ./mini_compiler
+
+Screenshots (See It in Action)
+Here's how it looks running on my setup:
+https://github.com/Arfaakhalid/mini-compiler-c-subset/blob/main/Screenshot%20(624).png
+
+Boom, main menu:
 
 Supports:
 - Types: int, float, char, void, bool, string
